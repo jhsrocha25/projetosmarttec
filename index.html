@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rede Smarttec | Assistência Técnica Premium</title>
+  
+  <meta name="description" content="A melhor assistência técnica de Montes Claros. Especializada em manutenção, consertos e reparos de celulares.">
+  
+  <!-- Taste-Skill: Modern Unique Font (No Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons per Taste-Skill rules -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo" style="font-size: 1.3rem;">Rede Smarttec</a>
+      <div class="nav-links">
+        <a href="index.html#hero">Início</a>
+        <a href="index.html#services">Serviços</a>
+        <a href="aparelhos.html">Aparelhos</a>
+      </div>
+      <button class="btn-primary magnetic" data-strength="15" onclick="openScheduleModal()">
+        <span>Agendar Reparo</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Asymmetric Sticky Hero Scroll Wrapper -->
+  <div class="hero-scroll-wrapper">
+    <header class="hero" id="hero">
+      
+      <!-- Video Background & Gradient Overlay -->
+      <video id="hero-video" src="scrolling-hero.mp4" muted playsinline class="hero-video-bg" preload="auto"></video>
+      <div class="video-overlay"></div>
+
+      <div class="hero-content stagger-wrapper">
+        <div class="hero-badge reveal-item" style="--index: 1;">
+          <span class="status-dot"></span> A Melhor Assistência de Montes Claros
+        </div>
+        <h1 class="hero-title reveal-item" style="--index: 2;">Seu aparelho <br><span class="text-accent">em boas</span> <br>mãos.</h1>
+        <p class="hero-desc reveal-item" style="--index: 3;">
+          Somos uma assistência técnica autorizada, especializada em manutenção e consertos de diversas marcas. Atendemos com seriedade, transparência e equipe qualificada para garantir que seu celular funcione perfeitamente.
+        </p>
+        <div class="hero-actions reveal-item" style="--index: 4;">
+          <button class="btn-primary magnetic" data-strength="25" onclick="window.open('https://api.whatsapp.com/send/?phone=553832210581&text=Ola,%20gostaria%20de%20falar%20com%20um%20atendente', '_blank')">
+            <span><i class="ph ph-whatsapp-logo"></i> Fale no WhatsApp</span>
+          </button>
+          <button class="btn-secondary magnetic" data-strength="20" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+            <span><i class="ph ph-device-mobile"></i> Ver Serviços</span>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Bento 2.0 Grid Services Section -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <h2 class="section-title">Nossas <br>Especialidades</h2>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Card 1: Reparo de Tela -->
+      <div class="bento-card span-2 bento-glass group" style="cursor: pointer;" onclick="window.open('https://api.whatsapp.com/send/?phone=553832210581&text=Ola,%20gostaria%20de%20saber%20mais%20sobre%20a%20Troca%20de%20Tela', '_blank')">
+        <div class="card-icon"><i class="ph ph-devices text-accent"></i></div>
+        <h3>Reparo e Troca de Tela</h3>
+        <p>Soluções desde reparos rápidos até substituição completa de tela e limpeza interna profunda. Utilizamos equipamentos atualizados e garantimos excelência.</p>
+        <div class="card-footer mt-auto" style="border-top: 1px solid var(--border-light); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+          <span class="action-link text-accent">Pedir Orçamento</span>
+          <i class="ph ph-whatsapp-logo icon-slide text-accent"></i>
+        </div>
+      </div>
+
+      <!-- Card 2: Bateria -->
+      <div class="bento-card bento-solid group" style="cursor: pointer;" onclick="window.open('https://api.whatsapp.com/send/?phone=553832210581&text=Ola,%20preciso%20de%20um%20diagnostico%20geral', '_blank')">
+        <div class="card-icon"><i class="ph ph-wrench text-accent"></i></div>
+        <h3>Consertos em Geral</h3>
+        <p>Profissionais altamente qualificados para resolver qualquer tipo de problema com rapidez, segurança e seguindo padrões exigidos.</p>
+        <div class="card-footer mt-auto" style="border-top: 1px solid var(--border-light); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+          <span class="action-link text-accent">Pedir Orçamento</span>
+          <i class="ph ph-whatsapp-logo icon-slide text-accent"></i>
+        </div>
+      </div>
+
+      <!-- Card 3: Placa -->
+      <div class="bento-card bento-solid group" style="cursor: pointer;" onclick="window.open('https://api.whatsapp.com/send/?phone=553832210581&text=Ola,%20preciso%20de%20um%20reparo%20avancado%20em%20placa', '_blank')">
+        <div class="card-icon"><i class="ph ph-cpu text-accent"></i></div>
+        <h3>Reparo em Placas</h3>
+        <p>Diagnóstico avançado e conserto focado na recuperação total de aparelhos danificados em suas placas microeletrônicas.</p>
+        <div class="card-footer mt-auto" style="border-top: 1px solid var(--border-light); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+          <span class="action-link text-accent">Pedir Orçamento</span>
+          <i class="ph ph-whatsapp-logo icon-slide text-accent"></i>
+        </div>
+      </div>
+
+      <!-- Card 4: Seminovos / Venda -->
+      <div class="bento-card span-2 bento-dark group">
+        <div class="bento-split">
+          <div class="bento-split-content">
+            <div class="card-icon"><i class="ph ph-shopping-bag-open text-emerald"></i></div>
+            <h3 class="text-white">Venda de Aparelhos</h3>
+            <p class="text-gray-400">Encontre dispositivos com qualidade e garantia. Nosso objetivo é garantir que cada cliente encontre a melhor solução tecnológica com transparência.</p>
+            <button class="btn-primary magnetic mt-6" data-strength="15" onclick="window.location.href='aparelhos.html'">Consultar Estoque</button>
+          </div>
+          <div class="bento-split-visual" style="display: flex; justify-content: center; align-items: center; background: #000;">
+            <img src="./assets/iphone_lineup.png" alt="Dispositivos Premium Apple" class="bento-img" style="object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="brand-col">
+        <span class="brand-logo footer-logo" style="font-size: 1.5rem;">Rede Smarttec</span>
+        <p class="footer-desc">A melhor assistência técnica com paixão pela resolução de problemas e qualidade.</p>
+      </div>
+      <div class="link-col">
+        <h4>Endereço</h4>
+        <p class="text-gray-400">Rua Raul Correa, 631<br>Funcionários<br>Montes Claros - MG</p>
+      </div>
+      <div class="link-col">
+        <h4>Contato</h4>
+        <p class="text-gray-400">+55 (38) 3221-0581<br>Seg a Sex: 08:30 as 19:00<br>Sábados: 08:30 as 13:00</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schedule Modal -->
+  <div id="scheduleModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Agendar <span class="text-accent">Reparo</span></h3>
+        <button class="close-modal" onclick="closeScheduleModal()"><i class="ph ph-x"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="schedName">Seu Nome</label>
+          <input type="text" id="schedName" placeholder="Ex: João Silva">
+        </div>
+        <div class="form-groups-row">
+          <div class="form-group">
+            <label for="schedDate">Data</label>
+            <input type="date" id="schedDate">
+          </div>
+          <div class="form-group">
+            <label for="schedTime">Horário</label>
+            <input type="time" id="schedTime">
+          </div>
+        </div>
+        <button class="btn-primary magnetic w-full mt-6" data-strength="10" onclick="submitSchedule()" style="width: 100%;">
+          <span style="justify-content: center;"><i class="ph ph-whatsapp-logo" style="font-size: 1.25rem;"></i> Enviar no WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rede Smarttec | Catálogo Apple</title>
+  
+  <meta name="description" content="Ecossistema Premium Apple. iPhones Seminovos com garantia.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="page-catalog">
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" style="font-size: 1.3rem;">Rede Smarttec</a>
+      <div class="nav-links">
+        <a href="index.html#hero">Início</a>
+        <a href="index.html#services">Serviços</a>
+        <a href="aparelhos.html" class="text-accent" style="font-weight: 700;">Aparelhos</a>
+      </div>
+      <button class="btn-primary magnetic" data-strength="15" onclick="openScheduleModal()">
+        <span>Agendar Reparo</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Title Section -->
+  <section class="catalog-header stagger-wrapper">
+    <div class="hero-badge reveal-item" style="--index: 1;">
+        <span class="status-dot"></span> Novos & Seminovos Premium
+    </div>
+    <h1 class="reveal-item" style="--index: 2;">Seu Novo <span class="text-accent">iPhone</span> Está Aqui.</h1>
+    <p class="hero-desc reveal-item" style="--index: 3;" style="margin: 0 auto; text-align: center; max-width: 600px; padding-bottom: 2rem;">
+      Aparelhos impecáveis, rigorosamente testados e com garantia total da Rede Smarttec. Escolha o seu modelo abaixo e garanta o melhor negócio de Montes Claros!
+    </p>
+    <button class="btn-primary magnetic reveal-item" style="--index: 4; margin: 0 auto;" data-strength="15" onclick="window.scrollTo({top: document.querySelector('.catalog-grid-section').offsetTop - 50, behavior: 'smooth'})">
+      <span><i class="ph ph-shopping-cart"></i> Ver Estoque Disponível</span>
+    </button>
+  </section>
+
+  <!-- E-commerce Grid -->
+  <section class="catalog-grid-section">
+    <div class="products-grid stagger-wrapper">
+
+      <!-- iPhone 17 Pro Max -->
+      <div class="product-card reveal-item group" style="--index: 4;">
+        <div class="product-visual">
+          <img src="./assets/ip17.jpg" alt="iPhone 17 Pro Max">
+        </div>
+        <div class="product-info">
+          <h3>iPhone 17 Pro Max</h3>
+          <ul class="spec-list">
+            <li><strong>Tela:</strong> <span>6,9" OLED Super Retina (120Hz)</span></li>
+            <li><strong>Chip:</strong> <span>A19 Pro</span></li>
+            <li><strong>RAM:</strong> <span>12 GB</span></li>
+            <li><strong>Armaz.:</strong> <span>256 GB a 2 TB</span></li>
+            <li><strong>Câmeras:</strong> <span>Tripla 48 MP (zoom 8x)</span></li>
+            <li><strong>Bateria:</strong> <span>até 39h de vídeo</span></li>
+          </ul>
+          <button class="btn-secondary magnetic mt-6 w-full" onclick="window.location.href='https://api.whatsapp.com/send/?phone=553832210581&text=Ola,%20tenho%20interesse%20no%20iPhone%2017%20Pro%20Max'" data-strength="15">
+            <span><i class="ph ph-whatsapp-logo text-accent" style="font-size: 1.2rem;"></i> Conversar com o vendedor</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- iPhone 16 Pro Max -->
+      <div class="product-card reveal-item group" style="--index: 5;">
+        <div class="product-visual">
+          <img src="./assets/ip16.jpg" alt="iPhone 16 Pro Max">
+        </div>
+        <div class="product-info">
+          <h3>iPhone 16 Pro Max</h3>
+          <ul class="spec-list">
+            <li><strong>Tela:</strong> <span>6,9" Super Retina XDR (120Hz)</span></li>
+            <li><strong>Chip:</strong> <span>A18 Pro</span></li>
+            <li><strong>RAM:</strong> <span>8 GB</span></li>
+            <li><strong>Armaz.:</strong> <span>256 GB a 1 TB</span></li>
+            <li><strong>Câmeras:</strong> <span>Fusion 48MP e Ultra 48MP</span></li>
+            <li><strong>Bateria:</strong> <span>até 33h de vídeo</span></li>
+          </ul>
+          <button class="btn-secondary magnetic mt-6 w-full" onclick="window.location.href='https://api.whatsapp.com/send/?phone=553832210581&text=Ola,%20tenho%20interesse%20no%20iPhone%2016%20Pro%20Max'" data-strength="15">
+            <span><i class="ph ph-whatsapp-logo text-accent" style="font-size: 1.2rem;"></i> Conversar com o vendedor</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- iPhone 15 Pro Max -->
+      <div class="product-card reveal-item group" style="--index: 6;">
+        <div class="product-visual">
+          <img src="./assets/ip15.jpg" alt="iPhone 15 Pro Max">
+        </div>
+        <div class="product-info">
+          <h3>iPhone 15 Pro Max</h3>
+          <ul class="spec-list">
+            <li><strong>Tela:</strong> <span>6,7" Super Retina XDR (120Hz)</span></li>
+            <li><strong>Chip:</strong> <span>A17 Pro</span></li>
+            <li><strong>Material:</strong> <span>Titânio Aeroespacial</span></li>
+            <li><strong>Conexão:</strong> <span>USB-C Nativo</span></li>
+            <li><strong>Câmeras:</strong> <span>48MP (Zoom óptico 5x)</span></li>
+            <li><strong>Bateria:</strong> <span>até 29h de vídeo</span></li>
+          </ul>
+          <button class="btn-secondary magnetic mt-6 w-full" onclick="window.location.href='https://api.whatsapp.com/send/?phone=553832210581&text=Ola,%20tenho%20interesse%20no%20iPhone%2015%20Pro'" data-strength="15">
+            <span><i class="ph ph-whatsapp-logo text-accent" style="font-size: 1.2rem;"></i> Conversar com o vendedor</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- iPhone 14 -->
+      <div class="product-card reveal-item group" style="--index: 7;">
+        <div class="product-visual">
+          <img src="./assets/ip14.jpg" alt="iPhone 14 Linha Premium">
+        </div>
+        <div class="product-info">
+          <h3>iPhone 14 Series</h3>
+          <ul class="spec-list">
+            <li><strong>Tela:</strong> <span>6,1" Super Retina XDR</span></li>
+            <li><strong>Chip:</strong> <span>A15 Bionic (5 núcleos GPU)</span></li>
+            <li><strong>RAM:</strong> <span>6 GB</span></li>
+            <li><strong>Câmeras:</strong> <span>Dupla 12 MP (Modo Ação)</span></li>
+            <li><strong>Segurança:</strong> <span>Detecção de Acidente</span></li>
+            <li><strong>Bateria:</strong> <span>até 20h de vídeo</span></li>
+          </ul>
+          <button class="btn-secondary magnetic mt-6 w-full" onclick="window.location.href='https://api.whatsapp.com/send/?phone=553832210581&text=Ola,%20tenho%20interesse%20no%20iPhone%2014'" data-strength="15">
+            <span><i class="ph ph-whatsapp-logo text-accent" style="font-size: 1.2rem;"></i> Conversar com o vendedor</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- iPhone 13 -->
+      <div class="product-card reveal-item group" style="--index: 8;">
+        <div class="product-visual">
+          <img src="./assets/ip13.jpg" alt="iPhone 13 Linha Premium">
+        </div>
+        <div class="product-info">
+          <h3>iPhone 13 Series</h3>
+          <ul class="spec-list">
+            <li><strong>Tela:</strong> <span>6,1" Super Retina XDR</span></li>
+            <li><strong>Chip:</strong> <span>A15 Bionic</span></li>
+            <li><strong>RAM:</strong> <span>4 GB</span></li>
+            <li><strong>Câmeras:</strong> <span>Dupla 12 MP (Modo Cinema)</span></li>
+            <li><strong>Design:</strong> <span>Ceramic Shield</span></li>
+            <li><strong>Bateria:</strong> <span>até 19h de vídeo</span></li>
+          </ul>
+          <button class="btn-secondary magnetic mt-6 w-full" onclick="window.location.href='https://api.whatsapp.com/send/?phone=553832210581&text=Ola,%20tenho%20interesse%20no%20iPhone%2013'" data-strength="15">
+            <span><i class="ph ph-whatsapp-logo text-accent" style="font-size: 1.2rem;"></i> Conversar com o vendedor</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- iPhone 12 -->
+      <div class="product-card reveal-item group" style="--index: 9;">
+        <div class="product-visual">
+          <img src="./assets/ip12.jpg" alt="iPhone 12 Linha Premium">
+        </div>
+        <div class="product-info">
+          <h3>iPhone 12 Series</h3>
+          <ul class="spec-list">
+            <li><strong>Tela:</strong> <span>6,1" Super Retina XDR</span></li>
+            <li><strong>Chip:</strong> <span>A14 Bionic</span></li>
+            <li><strong>RAM:</strong> <span>4 GB</span></li>
+            <li><strong>Câmeras:</strong> <span>Dupla 12 MP (Modo Noite)</span></li>
+            <li><strong>Conexão:</strong> <span>5G Nativo</span></li>
+            <li><strong>Bateria:</strong> <span>até 17h de vídeo</span></li>
+          </ul>
+          <button class="btn-secondary magnetic mt-6 w-full" onclick="window.location.href='https://api.whatsapp.com/send/?phone=553832210581&text=Ola,%20tenho%20interesse%20no%20iPhone%2012'" data-strength="15">
+            <span><i class="ph ph-whatsapp-logo text-accent" style="font-size: 1.2rem;"></i> Conversar com o vendedor</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="brand-col">
+        <span class="brand-logo footer-logo" style="font-size: 1.5rem;">Rede Smarttec</span>
+        <p class="footer-desc">A melhor assistência técnica com paixão pela resolução de problemas e qualidade.</p>
+      </div>
+      <div class="link-col">
+        <h4>Endereço</h4>
+        <p class="text-gray-400">Rua Raul Correa, 631<br>Funcionários<br>Montes Claros - MG</p>
+      </div>
+      <div class="link-col">
+        <h4>Contato</h4>
+        <p class="text-gray-400">+55 (38) 3221-0581<br>Seg a Sex: 08:30 as 19:00<br>Sábados: 08:30 as 13:00</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schedule Modal -->
+  <div id="scheduleModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Agendar <span class="text-accent">Reparo</span></h3>
+        <button class="close-modal" onclick="closeScheduleModal()"><i class="ph ph-x"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="schedName">Seu Nome</label>
+          <input type="text" id="schedName" placeholder="Ex: João Silva">
+        </div>
+        <div class="form-groups-row">
+          <div class="form-group">
+            <label for="schedDate">Data</label>
+            <input type="date" id="schedDate">
+          </div>
+          <div class="form-group">
+            <label for="schedTime">Horário</label>
+            <input type="time" id="schedTime">
+          </div>
+        </div>
+        <button class="btn-primary magnetic w-full mt-6" data-strength="10" onclick="submitSchedule()" style="width: 100%;">
+          <span style="justify-content: center;"><i class="ph ph-whatsapp-logo" style="font-size: 1.25rem;"></i> Enviar no WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
