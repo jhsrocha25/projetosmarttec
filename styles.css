@@ -148,18 +148,16 @@ button {
 .magnetic span { pointer-events: none; }
 
 
-/* 4. HERO SECTION (Asymmetric, Layout Rule 3) */
-/* Hero Sticky Scroll Container */
+/* 4. HERO SECTION (Asymmetric) */
+/* Hero Normal Container */
 .hero-scroll-wrapper {
   position: relative;
-  height: 350vh;
 }
 
 .hero {
   width: 100%;
   min-height: 100dvh; /* Safe for iOS Safari */
-  position: sticky;
-  top: 0;
+  position: relative;
   display: flex;
   align-items: center;
   overflow: hidden; /* Evitar que peças vazem da tela original */

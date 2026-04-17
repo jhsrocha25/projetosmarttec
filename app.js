@@ -51,52 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* 3. Hero Video Scrubbing Logic */
-    const heroWrapper = document.querySelector('.hero-scroll-wrapper');
-    const heroVideo = document.getElementById('hero-video');
-
-    if (heroWrapper && heroVideo) {
-        // Pausar completamente para o Scroll dominar sem "brigar" gerar telas piscantes
-        heroVideo.pause();
-        heroVideo.addEventListener('play', () => {
-            heroVideo.pause();
-        });
-
-        // Assegurar que os metadados do vídeo carregaram para checar 'duration'
-        heroVideo.addEventListener('loadedmetadata', () => {
-            let requestAnimationFrameId;
-
-            const syncVideoWithScroll = () => {
-                const rect = heroWrapper.getBoundingClientRect();
-                
-                // Usando clientHeight fixo evita o "pulo" chato que as barras do Android/iPhone geram (bouncing bug)
-                const viewportHeight = document.documentElement.clientHeight;
-                const scrollableArea = rect.height - viewportHeight;
-                
-                let scrolled = -rect.top;
-                let progress = scrolled / scrollableArea;
-                progress = Math.max(0, Math.min(1, progress));
-
-                if (!isNaN(heroVideo.duration) && heroVideo.duration > 0) {
-                    heroVideo.currentTime = heroVideo.duration * progress;
-                }
-            };
-
-            // Ligar ao scroll da janela usando requisição nativa de frame para extrema otimização de GPUs Mobile/PC (regras Taste Skill)
-            window.addEventListener('scroll', () => {
-                if(requestAnimationFrameId) cancelAnimationFrame(requestAnimationFrameId);
-                requestAnimationFrameId = requestAnimationFrame(syncVideoWithScroll);
-            }, { passive: true });
-
-            // Inicialização garantida caso a página comece rolada
-            syncVideoWithScroll();
-        });
-
-        // Fallback: se os metadados estivarem rápidos/locais recarrega já o evento
-        if (heroVideo.readyState >= 1) {
-            heroVideo.dispatchEvent(new Event('loadedmetadata'));
-        }
-    }
 });
 
 // ============================================
