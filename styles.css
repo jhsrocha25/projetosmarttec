@@ -245,6 +245,12 @@ button {
   object-fit: cover;
   z-index: 0;
   background-color: var(--text);
+  /* Forced GPU Acceleration para matar piscadas no Android (V-Sync repaints) */
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
 }
 
 .video-overlay {

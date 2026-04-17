@@ -56,8 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroVideo = document.getElementById('hero-video');
 
     if (heroWrapper && heroVideo) {
-        // Pausar IMEDIATAMENTE (caso o autoplay esteja ativado no HTML pro iOS)
+        // Pausar completamente para o Scroll dominar sem "brigar" gerar telas piscantes
         heroVideo.pause();
+        heroVideo.addEventListener('play', () => {
+            heroVideo.pause();
+        });
 
         // Assegurar que os metadados do vídeo carregaram para checar 'duration'
         heroVideo.addEventListener('loadedmetadata', () => {
@@ -66,12 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const syncVideoWithScroll = () => {
                 const rect = heroWrapper.getBoundingClientRect();
                 
-                // O scrollable area é altura do container que não é a tela inicial (height - innerHeight)
-                const scrollableArea = rect.height - window.innerHeight;
-                // rect.top fica negativo quando rolamos p/ baixo
+                // Usando clientHeight fixo evita o "pulo" chato que as barras do Android/iPhone geram (bouncing bug)
+                const viewportHeight = document.documentElement.clientHeight;
+                const scrollableArea = rect.height - viewportHeight;
+                
                 let scrolled = -rect.top;
-
-                // Progressão de 0 a 1
                 let progress = scrolled / scrollableArea;
                 progress = Math.max(0, Math.min(1, progress));
 
@@ -94,15 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (heroVideo.readyState >= 1) {
             heroVideo.dispatchEvent(new Event('loadedmetadata'));
         }
-
-        // Fix for iOS Safari Engine (prevent video freezing on mobile)
-        let isVideoUnlocked = false;
-        window.addEventListener('touchstart', () => {
-            if (!isVideoUnlocked) {
-                heroVideo.play().then(() => { heroVideo.pause(); }).catch(() => {});
-                isVideoUnlocked = true;
-            }
-        }, { once: true, passive: true });
     }
 });
 
