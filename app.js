@@ -56,6 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroVideo = document.getElementById('hero-video');
 
     if (heroWrapper && heroVideo) {
+        // Pausar IMEDIATAMENTE (caso o autoplay esteja ativado no HTML pro iOS)
+        heroVideo.pause();
+
         // Assegurar que os metadados do vídeo carregaram para checar 'duration'
         heroVideo.addEventListener('loadedmetadata', () => {
             let requestAnimationFrameId;
