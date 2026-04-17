@@ -259,9 +259,12 @@ button {
 }
 
 @media (max-width: 900px) {
+  .hero-video-bg {
+    object-position: 70% center;
+  }
   .video-overlay {
-    /* No celular o fundo dominará mais, garantindo leitura total onde a copy corre solta */
-    background: linear-gradient(to bottom, rgba(250, 250, 250, 0.95) 0%, rgba(250, 250, 250, 0.6) 100%);
+    /* No celular libera o campo visual inferior mantendo legibilidade acima */
+    background: linear-gradient(to bottom, rgba(250, 250, 250, 0.98) 0%, rgba(250, 250, 250, 0.7) 35%, rgba(250, 250, 250, 0) 100%);
   }
 }
 

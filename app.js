@@ -91,6 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (heroVideo.readyState >= 1) {
             heroVideo.dispatchEvent(new Event('loadedmetadata'));
         }
+
+        // Fix for iOS Safari Engine (prevent video freezing on mobile)
+        let isVideoUnlocked = false;
+        window.addEventListener('touchstart', () => {
+            if (!isVideoUnlocked) {
+                heroVideo.play().then(() => { heroVideo.pause(); }).catch(() => {});
+                isVideoUnlocked = true;
+            }
+        }, { once: true, passive: true });
     }
 });
 
